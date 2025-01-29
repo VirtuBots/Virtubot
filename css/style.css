@@ -515,6 +515,22 @@ body {
     color: var(--primary-color);
 }
 
+.price-card form {
+    margin: 20px 0;
+}
+
+.price-card input[type="submit"].btn {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.price-card input[type="submit"].btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 .price-card .get-started-form {
     margin: 20px 0;
     text-align: center;
