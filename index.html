@@ -211,18 +211,43 @@
             <h2 class="section-title">Contact Us</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                    <div class="contact-card">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <div class="contact-info">
+                                    <i class="fas fa-headset fa-3x mb-3"></i>
+                                    <h4>Get in Touch</h4>
+                                    <p><i class="fas fa-phone-alt me-2"></i>+971 58 9445054</p>
+                                    <p><i class="fas fa-map-marker-alt me-2"></i>Dubai, UAE</p>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                                    <div class="mb-3">
+                                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <select name="package" class="form-control" required>
+                                            <option value="">Select Package</option>
+                                            <option value="chatbot-hobby">Chatbot - Hobby</option>
+                                            <option value="chatbot-standard">Chatbot - Standard</option>
+                                            <option value="chatbot-pro">Chatbot - Pro</option>
+                                            <option value="agent-basic">Virtual Agent - Basic</option>
+                                            <option value="agent-plus">Virtual Agent - Plus</option>
+                                            <option value="agent-pro">Virtual Agent - Pro</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                </form>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
