@@ -515,6 +515,22 @@ body {
     color: var(--primary-color);
 }
 
+.price-card form {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.price-card input[type="image"] {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.price-card input[type="image"]:hover {
+    transform: scale(1.05);
+}
+
 /* Contact Section */
 .contact {
     padding: 120px 0;
