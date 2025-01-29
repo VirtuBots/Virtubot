@@ -515,6 +515,35 @@ body {
     color: var(--primary-color);
 }
 
+.price-card .get-started-form {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.price-card .get-started-form .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.price-card .get-started-form .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.featured .get-started-form .btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+.featured .get-started-form .btn:hover {
+    background-color: #ffd900;
+    border-color: #ffd900;
+    color: #000;
+}
+
 .price-card form {
     margin: 20px 0;
     text-align: center;
