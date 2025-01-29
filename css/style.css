@@ -502,6 +502,18 @@ body {
 }
 
 .price-card ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.price-card ul li i {
+    color: #ffd700;
+}
+
+.price-card ul li {
     margin-bottom: 1rem;
     padding-left: 1.5rem;
     position: relative;
@@ -574,6 +586,47 @@ body {
 
 .price-card input[type="image"]:hover {
     transform: scale(1.05);
+}
+
+.subscribe-btn {
+    background-color: #ffd700;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #ffed4a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.payment-icons img {
+    height: 20px;
+    width: auto;
+}
+
+.featured .subscribe-btn {
+    background-color: #ffd700;
+    color: #000;
+}
+
+.featured .subscribe-btn:hover {
+    background-color: #ffed4a;
 }
 
 /* Contact Section */
