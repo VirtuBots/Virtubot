@@ -592,31 +592,32 @@ body {
     display: inline-block;
     width: 100%;
     padding: 10px 20px;
-    background-color: #ffd700;
-    color: #000;
+    background-color: #ffd700 !important;
+    color: #000 !important;
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.1rem;
     font-weight: 600;
     margin-top: 20px;
     transition: all 0.3s ease;
-    cursor: pointer;
-    border: none;
+    cursor: pointer !important;
+    border: none !important;
 }
 
 .price-card .get-started:hover {
-    background-color: #ffed4a;
+    background-color: #ffed4a !important;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #000 !important;
 }
 
 .featured .get-started {
-    background-color: #ffd700;
-    color: #000;
+    background-color: #ffd700 !important;
+    color: #000 !important;
 }
 
 .featured .get-started:hover {
-    background-color: #ffed4a;
+    background-color: #ffed4a !important;
 }
 
 .price-card ul li {

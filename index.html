@@ -53,7 +53,7 @@
                         <input type="hidden" name="p3" value="1">
                         <input type="hidden" name="t3" value="M">
                         <input type="hidden" name="currency_code" value="USD">
-                        <button type="submit" class="btn btn-primary">Get Started Today</button>
+                        <button type="submit" class="btn btn-primary get-started">Get Started Today</button>
                     </form>
                 </div>
                 <div class="col-lg-6 text-center">
@@ -135,7 +135,7 @@
                                 <li><i class="fas fa-check"></i> API access</li>
                                 <li><i class="fas fa-check"></i> Basic Analytics</li>
                             </ul>
-                            <a href="#" class="btn btn-primary get-started">Get Started</a>
+                            <button class="btn btn-primary get-started">Get Started</button>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -148,7 +148,7 @@
                                 <li><i class="fas fa-check"></i> 2 chatbots</li>
                                 <li><i class="fas fa-check"></i> Everything in Hobby</li>
                             </ul>
-                            <a href="#" class="btn btn-primary get-started">Get Started</a>
+                            <button class="btn btn-primary get-started">Get Started</button>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -161,7 +161,7 @@
                                 <li><i class="fas fa-check"></i> 3 chatbots</li>
                                 <li><i class="fas fa-check"></i> Advanced Analytics</li>
                             </ul>
-                            <a href="#" class="btn btn-primary get-started">Get Started</a>
+                            <button class="btn btn-primary get-started">Get Started</button>
                         </div>
                     </div>
                 </div>
@@ -180,20 +180,7 @@
                                 <li>Full Screen/Custom Embedded</li>
                                 <li>Reporting Dashboard</li>
                             </ul>
-                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="get-started-form">
-                                <input type="hidden" name="cmd" value="_xclick-subscriptions">
-                                <input type="hidden" name="business" value="chadiabinader34@gmail.com">
-                                <input type="hidden" name="lc" value="US">
-                                <input type="hidden" name="item_name" value="VirtuBot Basic Plan">
-                                <input type="hidden" name="item_number" value="basic_plan">
-                                <input type="hidden" name="no_note" value="1">
-                                <input type="hidden" name="src" value="1">
-                                <input type="hidden" name="a3" value="47.70">
-                                <input type="hidden" name="p3" value="1">
-                                <input type="hidden" name="t3" value="M">
-                                <input type="hidden" name="currency_code" value="USD">
-                                <button type="submit" class="btn btn-primary">Get Started</button>
-                            </form>
+                            <button class="btn btn-primary get-started">Get Started</button>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -207,20 +194,7 @@
                                 <li>Custom LLM Integration</li>
                                 <li>All Basic features</li>
                             </ul>
-                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="get-started-form">
-                                <input type="hidden" name="cmd" value="_xclick-subscriptions">
-                                <input type="hidden" name="business" value="chadiabinader34@gmail.com">
-                                <input type="hidden" name="lc" value="US">
-                                <input type="hidden" name="item_name" value="VirtuBot Plus Plan">
-                                <input type="hidden" name="item_number" value="plus_plan">
-                                <input type="hidden" name="no_note" value="1">
-                                <input type="hidden" name="src" value="1">
-                                <input type="hidden" name="a3" value="367.13">
-                                <input type="hidden" name="p3" value="1">
-                                <input type="hidden" name="t3" value="M">
-                                <input type="hidden" name="currency_code" value="USD">
-                                <button type="submit" class="btn btn-primary">Get Started</button>
-                            </form>
+                            <button class="btn btn-primary get-started">Get Started</button>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -234,20 +208,7 @@
                                 <li>Custom LLM Integration</li>
                                 <li>All Plus features</li>
                             </ul>
-                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="get-started-form">
-                                <input type="hidden" name="cmd" value="_xclick-subscriptions">
-                                <input type="hidden" name="business" value="chadiabinader34@gmail.com">
-                                <input type="hidden" name="lc" value="US">
-                                <input type="hidden" name="item_name" value="VirtuBot Pro Plan">
-                                <input type="hidden" name="item_number" value="pro_plan">
-                                <input type="hidden" name="no_note" value="1">
-                                <input type="hidden" name="src" value="1">
-                                <input type="hidden" name="a3" value="9909.00">
-                                <input type="hidden" name="p3" value="1">
-                                <input type="hidden" name="t3" value="M">
-                                <input type="hidden" name="currency_code" value="USD">
-                                <button type="submit" class="btn btn-primary">Get Started</button>
-                            </form>
+                            <button class="btn btn-primary get-started">Get Started</button>
                         </div>
                     </div>
                 </div>
@@ -335,7 +296,45 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.get-started');
+            buttons.forEach((button, index) => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Button clicked!'); // Debug log
+                    const plans = ['hobby', 'standard', 'pro'];
+                    const prices = [68.00, 255.00, 850.00];
+                    const names = ['VirtuBot Hobby Plan', 'VirtuBot Standard Plan', 'VirtuBot Pro Plan'];
+                    
+                    const paypalUrl = new URL('https://www.paypal.com/cgi-bin/webscr');
+                    const params = {
+                        'cmd': '_xclick-subscriptions',
+                        'business': 'chadiabinader34@gmail.com',
+                        'lc': 'US',
+                        'item_name': names[index],
+                        'item_number': plans[index] + '_plan',
+                        'no_note': '1',
+                        'src': '1',
+                        'a3': prices[index],
+                        'p3': '1',
+                        't3': 'M',
+                        'currency_code': 'USD'
+                    };
+                    
+                    Object.keys(params).forEach(key => 
+                        paypalUrl.searchParams.append(key, params[key])
+                    );
+                    
+                    window.open(paypalUrl.toString(), '_blank');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
