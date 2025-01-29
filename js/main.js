@@ -229,4 +229,58 @@ document.addEventListener('DOMContentLoaded', function() {
         
         heroSection.appendChild(particles);
     }
+
+    // PayPal subscription handling
+    const plans = {
+        'hobby': {
+            price: 68.00,
+            name: 'VirtuBot Hobby Plan'
+        },
+        'standard': {
+            price: 255.00,
+            name: 'VirtuBot Standard Plan'
+        },
+        'pro': {
+            price: 850.00,
+            name: 'VirtuBot Pro Plan'
+        }
+    };
+
+    // Get all Get Started buttons
+    const buttons = document.querySelectorAll('.get-started');
+    
+    // Add click handler to each button
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Get plan details based on index
+            const planType = ['hobby', 'standard', 'pro'][index];
+            const plan = plans[planType];
+            
+            // Build PayPal URL
+            const paypalUrl = new URL('https://www.paypal.com/cgi-bin/webscr');
+            const params = {
+                'cmd': '_xclick-subscriptions',
+                'business': 'chadiabinader34@gmail.com',
+                'lc': 'US',
+                'item_name': plan.name,
+                'item_number': planType + '_plan',
+                'no_note': '1',
+                'src': '1',
+                'a3': plan.price,
+                'p3': '1',
+                't3': 'M',
+                'currency_code': 'USD'
+            };
+            
+            // Add parameters to URL
+            Object.keys(params).forEach(key => 
+                paypalUrl.searchParams.append(key, params[key])
+            );
+            
+            // Redirect to PayPal
+            window.open(paypalUrl.toString(), '_blank');
+        });
+    });
 });
