@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .text { font-family: Arial, sans-serif; font-weight: bold; }
+        .logo-text { fill: #FFD700; }
+        .triangle { fill: #FFD700; }
+    </style>
+    
+    <!-- Triangle Symbol -->
+    <path class="triangle" d="M0 10L15 10L7.5 25L0 10Z"/>
+    
+    <!-- Text -->
+    <text x="20" y="25" class="text logo-text" font-size="24">VIRTUBOT</text>
+</svg>
